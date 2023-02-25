@@ -3,7 +3,6 @@ Laravel Table of Content Generator
 
 Generates a Table of Contents from ***H1...H6***  Tags in HTML Content
 
-
 This package provides a simple library to build a Table-of-Contents from HTML markup.  It does so by evaluating your *H1...H6* tags.
 It can also automatically add appropriate *id* anchor attributes to header tags so that in-page links work.
 
@@ -22,7 +21,7 @@ Installation Options
 
 Install with composer :
 
-` composer require fxcjahid/laravel-table-of-content `
+`composer require fxcjahid/laravel-table-of-content`
 
 Usage
 -----
@@ -35,24 +34,37 @@ This package contains two main classes:
 Basic Example:
 
 ```php
-$myHtmlContent = <<<END
-    <h1>This is a header tag with no anchor id</h1>
-    <p>Lorum ipsum doler sit amet</p>
-    <h2 id='foo'>This is a header tag with an anchor id</h2>
-    <p>Stuff here</p>
-    <h3 id='bar'>This is a header tag with an anchor id</h3>
+use Fxcjahid\LaravelTableOfContent\Table;
+use Fxcjahid\LaravelTableOfContent\MarkupFixer;
+
+$content = <<<END
+	<h2>This is heading H2</h2>
+	<h3>This is heading H3</h3>
+	<h4>This is heading H4</h4>
+	<h2>This is heading H1</h2>
 END;
 
-$markupFixer  = new MarkupFixer();
-$tocGenerator = new Table();
 
-// This ensures that all header tags have `id` attributes so they can be used as anchor links
-$htmlOut  = "<div class='content'>" . $markupFixer->fix($myHtmlContent) . "</div>";
+/**
+  * Get Markup tag fixies
+  */
 
-// This generates the Table of Contents in HTML
-$htmlOut .= "<div class='toc'>" . $tocGenerator->getHtmlMenu($htmlOut) . "</div>";
+$getFixContent = $markup->fix($content);
 
-echo $htmlOut;
+/**
+  * Get Table Of content 
+  * Levels 1-6 (It's will skip heading tag)
+  */
+
+$getTableOfContent = $toc->getTableContent($getFixContent, 2);
+
+
+$htmlOut  = "<div class='content'>" . $getFixContent . "</div>";
+$htmlOut .= "<div class='toc'>" . $getTableOfContent . "</div>";
+
+return $htmlOut;
+
+
 ```
 
 This produces the following output:
@@ -109,8 +121,9 @@ use Fxcjahid\LaravelTableOfContent\MarkupFixer;
 
 	/**
 	 * Get Table Of content 
+	 * Note: without ID arttibutes Table can't generate
 	 */
-	$getTableOfContent = $toc->getTableContent($content);
+	$getTableOfContent = $toc->getTableContent($getFixContent);
 
        $htmlOut  = "<div class='content'>" . $getFixContent . "</div>"; 
        $htmlOut .= "<div class='toc'>" . $getTableOfContent . "</div>";
