@@ -3,13 +3,6 @@ Laravel Table of Content Generator
 
 Generates a Table of Contents from ***H1...H6***  Tags in HTML Content
 
-[Latest Version on Packagist][link-packagist]
-
-[Github Build][link-ghbuild]
-
-[PHPStan Level 8][link-phpstan]
-[Total Downloads][link-downloads]
-
 
 This package provides a simple library to build a Table-of-Contents from HTML markup.  It does so by evaluating your *H1...H6* tags.
 It can also automatically add appropriate *id* anchor attributes to header tags so that in-page links work.
@@ -29,7 +22,7 @@ Installation Options
 
 Install with composer :
 
-`composer require caseyamcl/toc ~2.0.0`
+` composer require fxcjahid/laravel-table-of-content `
 
 Usage
 -----
@@ -37,7 +30,7 @@ Usage
 This package contains two main classes:
 
 1. ` fxcjahid\LaravelTableOfContent\MarkupFixer`: Adds `id` anchor attributes to any *H1*...*H6* tags that do not already have any (you can specify which header tag levels to use at runtime)
-2. ` fxcjahid\LaravelTableOfContent\Table  ` : Generates a Table of Contents from HTML markup
+2. `fxcjahid\LaravelTableOfContent\Table ` : Generates a Table of Contents from HTML markup
 
 Basic Example:
 
@@ -126,7 +119,5 @@ use Fxcjahid\LaravelTableOfContent\MarkupFixer;
 
  } 
 ```
-
-
 
 * This package inspired by https://github.com/caseyamcl/toc
