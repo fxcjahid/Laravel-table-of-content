@@ -8,7 +8,7 @@
  */
 
 
-namespace Fxcjahid\LaravelTableOfContent;
+namespace fxcjahid\LaravelTableOfContent;
 
 use ArrayIterator;
 use DOMDocument;

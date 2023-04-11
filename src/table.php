@@ -7,7 +7,7 @@
  * @author: fxcjahid <fxcjahid3@gmail.com>
  */
 
-namespace Fxcjahid\LaravelTableOfContent;
+namespace fxcjahid\LaravelTableOfContent;
 
 
 use Knp\Menu\ItemInterface;

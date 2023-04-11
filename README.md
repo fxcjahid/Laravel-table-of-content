@@ -34,8 +34,8 @@ This package contains two main classes:
 Basic Example:
 
 ```php
-use Fxcjahid\LaravelTableOfContent\Table;
-use Fxcjahid\LaravelTableOfContent\MarkupFixer;
+use fxcjahid\LaravelTableOfContent\Table;
+use fxcjahid\LaravelTableOfContent\MarkupFixer;
 
 $content = <<<END
 	<h2>This is heading H2</h2>
@@ -100,8 +100,8 @@ Integration in controller
 -------------------------
 
 ```php
-use Fxcjahid\LaravelTableOfContent\Table;
-use Fxcjahid\LaravelTableOfContent\MarkupFixer;
+use fxcjahid\LaravelTableOfContent\Table;
+use fxcjahid\LaravelTableOfContent\MarkupFixer;
 
 /**
  * Show the articles page.

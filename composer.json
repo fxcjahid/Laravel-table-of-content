@@ -1,6 +1,7 @@
 {
     "name": "fxcjahid/laravel-table-of-content", 
     "type": "library",
+	"version": "2.1",
     "description": "Laravel Table Of Content Generator",
 	"keywords": ["Laravel Table Of Content", "table of contents", "toc"],
 	"license": "MIT",
@@ -13,7 +14,7 @@
         }
     ],
     "require": {
-		"php": "^7.1||^8.1",
+		"php": "^7.0||^8.0",
 		"masterminds/html5": "^2.1",
         "knplabs/knp-menu": "^2.0",
 		"cocur/slugify": "^2.0"
