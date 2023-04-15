@@ -21,7 +21,7 @@
     }, 
     "autoload": {
         "psr-4": {
-            "Fxcjahid\\LaravelTableOfContent\\": "src/"
+            "fxcjahid\\LaravelTableOfContent\\": "src/"
         }
     }
 }
