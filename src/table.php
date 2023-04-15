@@ -17,6 +17,7 @@ use Knp\Menu\MenuItem;
 use Knp\Menu\Renderer\ListRenderer;
 use Knp\Menu\Renderer\RendererInterface;
 use Masterminds\HTML5;
+use fxcjahid\LaravelTableOfContent\HtmlHelper;
 
 
 /**
