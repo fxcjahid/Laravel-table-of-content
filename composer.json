@@ -1,7 +1,7 @@
 {
     "name": "fxcjahid/laravel-table-of-content", 
     "type": "library",
-	"version": "2.2",
+	"version": "2.2.1",
     "description": "Laravel Table Of Content Generator",
 	"keywords": ["Laravel Table Of Content", "table of contents", "toc"],
 	"license": "MIT",
